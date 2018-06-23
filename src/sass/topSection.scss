@@ -1,0 +1,45 @@
+.top_section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .top_section_bg {
+    position: absolute;
+    z-index: 1;
+  }
+  .top_header {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: rem(1600px);
+    align-self: flex-end;
+    margin-bottom: rem(60px);
+    display: flex;
+    padding: rem(72px) rem(30px) rem(45px);
+    &::before {
+      @include before_fig(100%, rem(1px), $colorBlue);
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .top_section_content {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: rem(1600px);
+    align-self: flex-end;
+    padding-left: rem(105px);
+    .top_section_title {
+      font-size: rem(40px);
+      font-weight: 700;
+      color: $colorBlue;
+      margin-bottom: rem(40px);
+    }
+    .top_section_text {
+      width: 100%;
+      max-width: rem(415px);
+      text-align: left;
+    }
+  }
+}
