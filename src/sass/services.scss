@@ -1,0 +1,47 @@
+.services {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: rem(20px);
+  .services_wrap {
+    width: 100%;
+    max-width: rem(1600px);
+  }
+  .services_elem {
+    padding: rem(25px) 0;
+  }
+  .services_title {
+    font-size: rem(60px);
+    display: block;
+    position: relative;
+    margin-bottom: rem(25px);
+    font-weight: 300;
+    &::before {
+      @include before_fig(100%, rem(1.5px), $colorBlue);
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .services_list {
+    padding-left: rem(130px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .services_list_elem {
+    display: flex;
+    flex: 1 1 40%;
+    align-items: flex-start;
+    max-width: rem(540px);
+    margin-bottom: rem(10px);
+    padding-right: rem(20px);
+    .services_icon {
+      width: 100%;
+      max-width: rem(52px);
+      height: auto;
+      margin-right: rem(34px);
+    }
+    .services_text {
+      padding-top: rem(12px);
+      font-weight: 400;
+    }
+  }
+}

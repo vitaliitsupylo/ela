@@ -1,0 +1,37 @@
+.footer_main {
+  background-color: $colorSky;
+  padding: rem(40px) 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer_right {
+    display: flex;
+    align-items: flex-end;
+  }
+  .footer_contacts {
+    display: flex;
+    flex-direction: column;
+    font-size: rem(20px);
+    font-weight: 700;
+    margin-right: rem(95px);
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    a {
+      display: block;
+      margin: 0 rem(17px);
+      font-size: rem(45px);
+      color: #fff;
+      transition: color .4s;
+      &:hover {
+        color: $colorBlue;
+      }
+    }
+  }
+}

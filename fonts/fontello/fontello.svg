@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="cancel-music" unicode="&#xe800;" d="M619 350l356 357c33 32 33 86 0 118-32 33-86 33-118 0l-357-356-356 356c-33 33-87 33-119 0-33-32-33-86 0-118l356-357-356-357c-33-32-33-86 0-118 32-33 86-33 119 0l356 356 357-356c32-33 86-33 118 0 33 32 33 86 0 118l-356 357z" horiz-adv-x="1000" />
+
+<glyph glyph-name="linkedin-button" unicode="&#xe801;" d="M500 850c-276 0-500-224-500-500s224-500 500-500 500 224 500 500c0 276-224 500-500 500z m-125-742h-125v437h125v-437z m-59 464c-32 0-58 26-58 59s26 58 58 58c33 0 59-26 59-58 0-33-26-59-59-59z m497-464h-125v270c0 32-10 54-48 54-65 0-77-54-77-54v-270h-125v437h125v-41c17 13 62 41 125 41 40 0 125-24 125-170v-267z" horiz-adv-x="1000" />
+
+<glyph glyph-name="facebook-logo-button" unicode="&#xe802;" d="M500 850c-276 0-500-224-500-500 0-276 224-500 500-500 276 0 500 224 500 500 0 276-224 500-500 500z m124-518h-81c0-130 0-289 0-289h-120c0 0 0 158 0 289h-58v103h58v66c0 48 22 122 121 122l89 0v-100c0 0-54 0-64 0-11 0-26-5-26-28v-60h92l-11-103z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>
