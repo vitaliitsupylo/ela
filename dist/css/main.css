@@ -141,6 +141,36 @@ body {
       width: 100%;
       max-width: 25.9375rem;
       text-align: left; }
+  .top_section.animation .top_header::before {
+    transition: width 1s;
+    width: 0; }
+  .top_section.animation .top_section_title {
+    position: relative;
+    left: 5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: left .7s ease-out, opacity .7s ease-out, visibility .7s ease-out; }
+  .top_section.animation .top_section_text {
+    position: relative;
+    top: -3.125rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .7s .7s ease-out, opacity .7s .7s ease-out, visibility .7s .7s ease-out; }
+  .top_section.animation .top_section_bg {
+    opacity: 0;
+    transition: opacity 1.2s ease-out; }
+  .top_section.animation.active .top_header::before {
+    width: 100%; }
+  .top_section.animation.active .top_section_title {
+    left: 0;
+    opacity: 1;
+    visibility: visible; }
+  .top_section.animation.active .top_section_text {
+    opacity: 1;
+    visibility: visible;
+    top: 0; }
+  .top_section.animation.active .top_section_bg {
+    opacity: 1; }
 
 .services {
   display: flex;
@@ -151,6 +181,11 @@ body {
     max-width: 100rem; }
   .services .services_elem {
     padding: 1.5625rem 0; }
+    .services .services_elem.animation .services_title::before {
+      width: 0;
+      transition: width 1s; }
+    .services .services_elem.animation.active .services_title::before {
+      width: 100%; }
   .services .services_title {
     font-size: 3.75rem;
     display: block;
@@ -185,6 +220,35 @@ body {
     .services .services_list_elem .services_text {
       padding-top: 0.75rem;
       font-weight: 400; }
+    .services .services_list_elem.animation .services_icon {
+      opacity: 0;
+      transform: scale(0.4);
+      transition: opacity .8s ease-out, transform .8s ease-out; }
+    .services .services_list_elem.animation .services_text {
+      position: relative; }
+      .services .services_list_elem.animation .services_text span {
+        position: relative;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity .5s .4s ease-out; }
+      .services .services_list_elem.animation .services_text::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        transition: width .8s .4s ease-out; }
+    .services .services_list_elem.animation.active .services_icon {
+      opacity: 1;
+      transform: scale(1); }
+    .services .services_list_elem.animation.active .services_text span {
+      opacity: 1; }
+    .services .services_list_elem.animation.active .services_text::before {
+      width: 0; }
 
 .footer_main {
   background-color: #1a8ed3;

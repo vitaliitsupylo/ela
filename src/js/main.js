@@ -1,11 +1,10 @@
 ;
 (() => {
-  'use strict';
+    'use strict';
 
-  /*variables*/
-
-
-
+    /*variables*/
+    /*animation*/
+    const arrAnimation = document.querySelectorAll('.animation');
 
 
     /*parallax all*/
@@ -14,5 +13,26 @@
         let p = new Parallax('.parallax').init();
     }
 
+
+    /*animation*/
+    let addAnimation = null;
+    if (arrAnimation.length > 0) {
+        addAnimation = require('./modules/animation');
+    }
+
+    window.addEventListener('load', () => {
+        /*animation*/
+        if (addAnimation !== null) {
+            addAnimation(arrAnimation);
+        }
+    });
+
+
+    window.addEventListener('scroll', () => {
+        /*animation*/
+        if (addAnimation !== null) {
+            addAnimation(arrAnimation);
+        }
+    });
 
 })();

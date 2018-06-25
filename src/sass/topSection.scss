@@ -42,4 +42,50 @@
       text-align: left;
     }
   }
+  &.animation {
+    .top_header {
+      &::before {
+        transition: width 1s;
+        width: 0;
+      }
+    }
+    .top_section_title {
+      position: relative;
+      left: rem(80px);
+      opacity: 0;
+      visibility: hidden;
+      transition: left .7s ease-out, opacity .7s ease-out, visibility .7s ease-out;
+    }
+    .top_section_text {
+      position: relative;
+      top: rem(-50px);
+      opacity: 0;
+      visibility: hidden;
+      transition: top .7s .7s ease-out, opacity .7s .7s ease-out, visibility .7s .7s ease-out;
+    }
+    .top_section_bg {
+      opacity: 0;
+      transition: opacity 1.2s ease-out;
+    }
+    &.active {
+      .top_header {
+        &::before {
+          width: 100%;
+        }
+      }
+      .top_section_title {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+      .top_section_text {
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+      }
+      .top_section_bg {
+        opacity: 1;
+      }
+    }
+  }
 }

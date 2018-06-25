@@ -8,6 +8,21 @@
   }
   .services_elem {
     padding: rem(25px) 0;
+    &.animation {
+      .services_title {
+        &::before {
+          width: 0;
+          transition: width 1s;
+        }
+      }
+      &.active {
+        .services_title {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
   .services_title {
     font-size: rem(60px);
@@ -42,6 +57,43 @@
     .services_text {
       padding-top: rem(12px);
       font-weight: 400;
+    }
+    &.animation {
+      .services_icon {
+        opacity: 0;
+        transform: scale(.4);
+        transition: opacity .8s ease-out, transform .8s ease-out;
+      }
+      .services_text {
+        position: relative;
+        span {
+          position: relative;
+          z-index: 1;
+          opacity: 0;
+          transition: opacity .5s .4s ease-out;
+        }
+        &::before {
+          @include before_fig(100%, 100%, #fff);
+          z-index: 2;
+          top: 0;
+          right: 0;
+          transition: width .8s .4s ease-out;
+        }
+      }
+      &.active {
+        .services_icon {
+          opacity: 1;
+          transform: scale(1);
+        }
+        .services_text {
+          span {
+            opacity: 1;
+          }
+          &::before {
+            width: 0;
+          }
+        }
+      }
     }
   }
 }

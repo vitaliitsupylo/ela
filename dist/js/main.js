@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(4);
+module.exports = __webpack_require__(5);
 
 
 /***/ }),
@@ -77,12 +77,11 @@ module.exports = __webpack_require__(4);
 
 ;
 (() => {
-  'use strict';
+    'use strict';
 
-  /*variables*/
-
-
-
+    /*variables*/
+    /*animation*/
+    const arrAnimation = document.querySelectorAll('.animation');
 
 
     /*parallax all*/
@@ -91,6 +90,27 @@ module.exports = __webpack_require__(4);
         let p = new Parallax('.parallax').init();
     }
 
+
+    /*animation*/
+    let addAnimation = null;
+    if (arrAnimation.length > 0) {
+        addAnimation = __webpack_require__(4);
+    }
+
+    window.addEventListener('load', () => {
+        /*animation*/
+        if (addAnimation !== null) {
+            addAnimation(arrAnimation);
+        }
+    });
+
+
+    window.addEventListener('scroll', () => {
+        /*animation*/
+        if (addAnimation !== null) {
+            addAnimation(arrAnimation);
+        }
+    });
 
 })();
 
@@ -724,6 +744,20 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+module.exports = (arr) => {
+
+    for (let i = 0; i < arr.length; i++) {
+        let min = arr[i].getBoundingClientRect().top - window.innerHeight * .8;
+        if (min < 0) {
+            arr[i].classList.add('active');
+        }
+    }
+};
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
