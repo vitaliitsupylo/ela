@@ -17,6 +17,11 @@
     margin-bottom: rem(60px);
     display: flex;
     padding: rem(72px) rem(30px) rem(45px);
+    .logo {
+      width: 100%;
+      max-width: rem(255px);
+      height: auto;
+    }
     &::before {
       @include before_fig(100%, rem(1px), $colorBlue);
       right: 0;
@@ -44,6 +49,13 @@
   }
   &.animation {
     .top_header {
+      .logo {
+        opacity: 0;
+        position: relative;
+        visibility: hidden;
+        top: rem(40px);
+        transition: top .4s .9s ease-out, visibility .4s .9s ease-out, opacity .4s .9s ease-out,;
+      }
       &::before {
         transition: width 1s;
         width: 0;
@@ -69,6 +81,11 @@
     }
     &.active {
       .top_header {
+        .logo {
+          opacity: 1;
+          visibility: visible;
+          top: 0;
+        }
         &::before {
           width: 100%;
         }

@@ -10,6 +10,13 @@
     padding: rem(25px) 0;
     &.animation {
       .services_title {
+        span {
+          position: relative;
+          opacity: 0;
+          left: rem(100px);
+          visibility: hidden;
+          transition: visibility .4s .9s ease-out, opacity .4s .9s ease-out, left .4s .9s ease-out;
+        }
         &::before {
           width: 0;
           transition: width 1s;
@@ -17,6 +24,11 @@
       }
       &.active {
         .services_title {
+          span {
+            opacity: 1;
+            visibility: visible;
+            left: 0;
+          }
           &::before {
             width: 100%;
           }
